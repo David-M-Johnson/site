@@ -1,0 +1,251 @@
+/* #502F3A */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f6f2ea;
+  color: #2a2a2a;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #cb9d8e;
+  padding: 1em 0;
+  text-align: center;
+  border-bottom: 1px solid #957367;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #502F3A;
+  font-weight: bold;
+}
+
+.layout {
+  display: flex;
+  max-width: 1000px;
+  margin: 2em auto;
+  padding: 0 2em;
+  gap: 60px;
+}
+
+/* LEFT: Full bio */
+.bio-section {
+  flex: 2;
+}
+
+.full-bio {
+  max-width: 100%;
+}
+
+/* RIGHT: Sidebar */
+.sidebar {
+  flex: 1;
+  text-align: center;
+}
+
+.headshot {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+.name {
+  margin-top: 0.3em;
+  font-size: 1.4em;
+}
+
+.short-bio {
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 1.4em;
+  color: #2a2a2a;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #555;
+}
+
+/* Responsive fallback */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bio-section {
+    text-align: center;
+  }
+}
+
+/* Main content only, no sidebar */
+.content-only {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 0 1.5em;
+}
+
+/* Project entries */
+.project-entry {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1em;
+}
+
+.project-photo {
+  width: 280px;             /* Fixed width */
+  height: auto;             /* Maintain aspect ratio */
+  border: 1px solid #999;   /* Snug border */
+  margin-right: 1.5em;      /* Space between photo and text */
+  display: block;
+  flex-shrink: 0;           /* Prevent shrinking in flex container */
+}
+
+.project-text h2 {
+  margin-top: 0;
+  font-size: 1.4em;
+}
+
+.project-text p {
+  margin-top: 0.4em;
+  font-size: 1em;
+  color: #333;
+}
+
+/* Responsive fallback */
+@media (max-width: 768px) {
+  .project-entry {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-photo {
+    width: 100%;
+    max-width: 320px;
+    margin-right: 0;
+    margin-bottom: 1em;
+  }
+
+  .project-text {
+    text-align: center;
+  }
+}
+
+
+.experience-item {
+  margin-bottom: 2em;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 0.5em;
+}
+
+.experience-header strong {
+  font-size: 1.1em;
+}
+
+.experience-location {
+  font-style: italic;
+  color: #555;
+}
+
+.experience-dates {
+  font-size: 0.95em;
+  color: #666;
+  white-space: nowrap;
+  margin-left: 1em;
+}
+
+.experience-item ul {
+  padding-left: 1.2em;
+  margin-top: 0.5em;
+}
+
+.experience-item li {
+  margin-bottom: 0.5em;
+}
+
+/* Side Projects */
+.side-projects {
+  margin-top: 2.5em;
+  text-align: center;
+}
+
+.side-projects h2 {
+  font-size: 1.4em;
+  margin-bottom: 0.5em;
+}
+
+.elegant-list {
+  list-style-type: disc;
+  padding-left: 0;
+  display: inline-block;
+  text-align: left;
+  color: #333;
+}
+
+.elegant-list li {
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+
+
+
+/* ***************** WAVING HAND ***************** */
+div.name{
+    font-weight: bold;
+    font-size: 35px;
+    display: flex; /* Use flexbox to align elements horizontally */
+    margin-bottom: 0px;
+    margin-right: 0px;
+}
+span.wave {
+    width: 40px;
+    height: 40px;
+    font-size: 35px;
+    margin: 0px 0px 0px 0px;
+    transform-origin: 70% 70%;
+    animation: spin 3s ease-in-out infinite;
+    display: inline-block;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(30deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(30); } }
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+      }
+      10% {
+        transform: rotate(14deg);
+      }
+      20% {
+        transform: rotate(-8deg);
+      }
+      30% {
+        transform: rotate(14deg);
+      }
+      40% {
+        transform: rotate(-4deg);
+      }
+      50% {
+        transform: rotate(10deg);
+      }
+      60% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+}
