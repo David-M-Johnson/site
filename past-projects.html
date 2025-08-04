@@ -83,9 +83,10 @@
           <p>
             This summer, I made an HPC Job Monitor, a Python tool to track the status of HPC jobs through SSH in a GUI.
             The app checks in the status of you jobs at a specificed interval and returns the latest!
-            It also keeps track of completed jobs so you have a log. While some HPCs might have firewalls, I think I 
-            should be able to get it to work on a couple of others. I'm going to keep tweaking this over the summer as 
-            I come up with new features.
+            It also keeps track of completed jobs so you have a log, and when you reopen it, it picks up from where it left off.
+            Unfortunetly, after two weeks, Imperial College blocked authentication via Paramiko (the python library I was using).
+            I switched the program to use "keyboard-interactive" authentication, and now it works again! 
+            We'll see how long it takes Imperial to prevent this method.  
           </p>
         </div>
       </article>
